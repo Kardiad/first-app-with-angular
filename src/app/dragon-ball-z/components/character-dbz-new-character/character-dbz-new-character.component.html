@@ -1,0 +1,23 @@
+<h4>Añadir personaje</h4>
+<form class="form d-flex flex-column"
+    (ngSubmit)="emitCharacter()">
+    <label class="form-label" for="nombre">Nombre:</label>
+    <input 
+        class="form-control" 
+        type="text" 
+        name="nombre" 
+        id="nombre" 
+        [(ngModel)]="character.name">
+    <label class="form-label" for="poder">Poder:</label>
+    <input 
+        class="form-control" 
+        type="number" 
+        name="poder"
+        id="poder" 
+        [(ngModel)]="character.power">
+    <button 
+        class="btn btn-success mt-3 col-5 m-auto" 
+        type="submit">
+        Añadir Personaje
+    </button>
+</form>

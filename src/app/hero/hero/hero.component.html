@@ -1,0 +1,38 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <table>
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Power
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{name}}
+                </td>
+                <td>
+                    {{age}}
+                </td>
+                <td>
+                    {{poder()}}
+                </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer d-flex">
+        <button *ngIf="name==='Batman'" (click)="changeHero()" class="btn btn-primary col-6">Cambiar nombre</button>
+        <button *ngIf="age===30" (click)="changeAge()" class="btn btn-primary col-6">Cambiar edad</button>
+        <button *ngIf="name!=='Batman' || age!==30" (click)="reset()" class="btn btn-primary col-6">reset</button>
+    </div>
+  </div>
